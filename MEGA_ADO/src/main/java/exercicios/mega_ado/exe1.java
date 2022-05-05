@@ -10,7 +10,8 @@ public class exe1 {
         int exercicios = input.nextInt();
 
         switch (exercicios) {
-            case 1:
+            // EXE1
+            case 1:             
                 double temp;
                 String chuva = null;
                 double din = 0;

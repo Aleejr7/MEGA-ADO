@@ -9,8 +9,7 @@ public class exe1 {
         System.out.println("Informe o exercício que deseja ver: ");
         int exercicios = input.nextInt();
 
-        switch (exercicios) {
-            // EXE1
+        switch (exercicios) {           
             case 1:             
                 double temp;
                 String chuva = null;

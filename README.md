@@ -1,2 +1,2 @@
-# MEGA-ADO
-Exercícios da MEGA ADO 
+# GRUPO DE PI
+PROJETO / ADOS / EXERCICIOS

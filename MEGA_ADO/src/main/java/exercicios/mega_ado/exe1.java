@@ -49,7 +49,8 @@ public class exe1 {
                 System.out.println("--- Calcular valor com desconto e sem desconto ---");
                 int u;
                 double valorUnitario,
-                 valorTotal, desconto;
+                 valorTotal,
+                 desconto;
                 System.out.println("Digite a quantidade de itens comprados: ");
                 u = input.nextInt();
                 System.out.println("Digite o valor unitario do item comprado: ");
@@ -64,11 +65,32 @@ public class exe1 {
                 }
                 break;
 
-            case 5:
+            case 4:
+                System.out.println("--- IMC ---");
+                float peso, altura, massa;
+                System.out.println("Digite seu peso:");
+                peso = input.nextFloat();
+                System.out.println("Digite sua altura:");
+                altura = input.nextFloat();
+                massa = peso / (altura * altura);
+                System.out.printf("Sua massa corpÃ³rea Ã© = %.3f", massa);
+                
+                if (massa < 18.5) {
+                    System.out.println(" Grau de obsidade = Magreza");
+                    
+                } else if (massa >= 18.5 && massa <= 24.9) {
+                    System.out.println(" Grau de obsidade = Normal");
+                    
+                } else if (massa >= 24.9 && massa <= 30) {
+                    System.out.println(" Grau de obsidade = Sobrepeso");
+                    
+                } else {
+                    System.out.println("Grau de obsidade = Obesidade");
+                }
 
+            case 5:
                 System.out.println("--- Calculo da conta de energia ---");
-                double kwh,
-                 conta;
+                double kwh, conta;
                 System.out.println("Informe o kwh conaumido: ");
                 kwh = input.nextDouble();
 

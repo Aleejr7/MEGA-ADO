@@ -2,9 +2,11 @@ package exercicios.mega_ado;
 
 import java.util.Scanner;
 
+
 public class exe1 {
 
     public static void main(String[] args) {
+        do{
         Scanner input = new Scanner(System.in);
         System.out.println("--- MENU --- \n");
         System.out.println("Digite 1 para Integrantes do grupo");
@@ -146,5 +148,9 @@ public class exe1 {
                 System.out.println("Obrigado por acessar nossos exercicios");
                 System.exit(0);    
         }
-    }
-}
+    }while(true);
+ }
+}        
+
+
+    

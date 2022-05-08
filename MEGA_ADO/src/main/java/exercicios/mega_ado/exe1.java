@@ -1,4 +1,4 @@
-package exercicios.mega_ado;
+package exercicios.mega_ado; 
 
 import java.util.Scanner;
 
@@ -6,7 +6,16 @@ public class exe1 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Informe o exercício que deseja ver: ");
+        System.out.println("--- MENU --- \n");
+        System.out.println("Digite 1 para Integrantes do grupo");
+        System.out.println("Digite 2 para Exercicio 2");
+        System.out.println("Digite 3 para Exercicio 3");
+        System.out.println("Digite 4 para exercicio 4");
+        System.out.println("Digite 5 para exercicio 5");
+        System.out.println("Digite 6 para exercicio 6");
+        System.out.println("Digite 7 para sair do programa");
+        
+        System.out.println("Digite um numero: ");
         int exercicios = input.nextInt();
 
         switch (exercicios) {
@@ -67,30 +76,34 @@ public class exe1 {
 
             case 4:
                 System.out.println("--- IMC ---");
-                float peso, altura, massa;
+                float peso,
+                 altura,
+                 massa;
                 System.out.println("Digite seu peso:");
                 peso = input.nextFloat();
                 System.out.println("Digite sua altura:");
                 altura = input.nextFloat();
                 massa = peso / (altura * altura);
-                System.out.printf("Sua massa corpÃ³rea Ã© = %.3f", massa);
-                
+                System.out.printf("Sua massa corporal = %.3f", massa);
+
                 if (massa < 18.5) {
                     System.out.println(" Grau de obsidade = Magreza");
-                    
+
                 } else if (massa >= 18.5 && massa <= 24.9) {
                     System.out.println(" Grau de obsidade = Normal");
-                    
+
                 } else if (massa >= 24.9 && massa <= 30) {
                     System.out.println(" Grau de obsidade = Sobrepeso");
-                    
+
                 } else {
-                    System.out.println("Grau de obsidade = Obesidade");
+                    System.out.println(" Grau de obsidade = Obesidade");
                 }
+                break;
 
             case 5:
                 System.out.println("--- Calculo da conta de energia ---");
-                double kwh, conta;
+                double kwh,
+                 conta;
                 System.out.println("Informe o kwh conaumido: ");
                 kwh = input.nextDouble();
 
@@ -107,6 +120,31 @@ public class exe1 {
                     conta = kwh * 0.28738;
                     System.out.println("O valor da sua conta é: R$" + conta);
                 }
+                break;
+
+            case 6:
+                System.out.println("-----Calculo de conta de água e esgoto-----");
+                double consumo,
+                 valor = 0;
+                System.out.println("Digite a quantidade de litros de agua consumido: ");
+                consumo = input.nextFloat();
+                if (consumo <= 10) {
+                    System.out.println("Valor a pagar = R$ 58,00");
+                } else if (consumo > 10 && consumo <= 20) {
+                    valor = (29.00 + (consumo-10) * 4.54) + (29.00 + (consumo-10) * 4.54);
+                    System.out.println("Valor a pagar = R$" + valor);
+                } else if (consumo > 20 && consumo <= 50) {
+                    valor =  (29.00 + 10 * 4.54 + (consumo - 20) * 11.33) + (29.00 + 10 * 4.54 + (consumo - 20) * 11.33);
+                    System.out.println("Valor a pagar = R$" + valor);
+                } else if (consumo > 50) {
+                    valor = (29.00 + 10 * 4.54 + 30 * 11.33 + (consumo - 50) * 12.48) + (29.00 + 10 * 4.54 + 30 * 11.33 + (consumo - 50) * 12.48);
+                    System.out.println("Valor a pagar = R$" + valor);
+                }
+                break;
+            
+            case 7:
+                System.out.println("Obrigado por acessar nossos exercicios");
+                System.exit(0);    
         }
     }
 }
